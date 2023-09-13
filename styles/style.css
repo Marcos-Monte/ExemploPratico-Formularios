@@ -142,6 +142,13 @@ fieldset {
     padding: 1em;
     box-sizing: border-box;
     margin: 1em 0;
+    border-radius: 10px;
+    border: 2px solid #d92121;
+}
+
+fieldset legend {
+    color: #6c0000;
+    font-weight: bold;
 }
 
 input,
@@ -149,7 +156,8 @@ select,
 button {
     padding: .5em;
     border: 1px solid black;
-    border-radius: 1rem;
+    border-radius: 10px;
+    color: grey;
 }
 
 button {
@@ -170,9 +178,26 @@ footer {
     text-align: center;
 }
 
+/*Hover*/
+button:hover {
+    transition: .4s;
+    background-color: #6c0000;
+}
+
+input:hover,
+select:hover {
+    background-color: gainsboro;
+}
+
+.sobre__destaques:hover {
+    transition: .4s;
+    border-left: 2px solid #d92121;
+    padding-left: 2em;
+}
+
 /*Queries*/
 
-@media (min-width: 280px) and (max-width: 547px) {
+@media (max-width: 547px) {
 
     .banner {
         height: 40vh;
@@ -194,6 +219,15 @@ footer {
     .sobre,
     .formularios {
         padding: 1.5em .5em;
+    }
+
+    p {
+        line-height: 2em;
+        text-align: justify;
+    }
+
+    .sobre__destaques {
+        font-size: .7rem;
     }
 
 }
